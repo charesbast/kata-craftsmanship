@@ -1,0 +1,16 @@
+{
+  "name": "aawii",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "4.*",
+    "body-parser" : "1.13.2",
+    "method-override" : "2.3.4",
+    "errorhandler" : "1.4.1",
+    "serve-favicon" : "2.3.0",
+    "hjs": "*"
+  }
+}
