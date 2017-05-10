@@ -3,7 +3,7 @@
  * Module dependencies.
  */
 
-var express = require('express'),
+const express = require('express'),
 	bodyParser = require('body-parser'),
 	methodOverride = require('method-override'),
 	errorHandler = require('errorhandler'),
@@ -15,7 +15,7 @@ var express = require('express'),
 /**
  * Settings
  */
-var app = express();
+const app = express();
 
 app.set('port', process.env.PORT || 3000);
 app.set('views', __dirname + '/views');
@@ -34,16 +34,9 @@ if ('development' === app.get('env')) {
 /**
  * Routes
  */
-var	front = require('./routes/front'), 
-	api = require('./routes/api');
+const	api = require('./routes/api');
 
-app
-.use('/front', front.routes)
-.use('/api', api.routes);
-
-app.get('/', function(req, res) {
-	res.send('Aawii');
-});
+app.use('/', api.routes);
 
 /**
  * Start server
